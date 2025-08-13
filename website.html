@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yinan Wang | Computer Vision Researcher</title>
+  <meta name="description" content="Yinan Wang — PhD researcher at McGill University working on 3D attention modeling, relighting, and image quality assessment." />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b1220; --card:#0f172a; --muted:#94a3b8; --accent:#22d3ee; --accent-2:#a78bfa; --text:#e5e7eb; --white:#ffffff;
+    }
+    html,body{height:100%; scroll-behavior:smooth;}
+    body{font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; background:radial-gradient(1200px 800px at 80% -10%, #172554 0%, transparent 60%),linear-gradient(180deg,#0b1220 0%, #0b1220 100%); color:var(--text);}    
+    a{color:var(--accent)} a:hover{color:#67e8f9}
+    .navbar{backdrop-filter:saturate(1.3) blur(10px); background:rgba(11,18,32,.6)!important;}
+    .nav-link{color:var(--text)!important; opacity:.8}
+    .nav-link.active, .nav-link:hover{opacity:1; color:var(--white)!important}
+    .btn-brand{--bs-btn-color:#0b1220; --bs-btn-bg:var(--accent); --bs-btn-border-color:var(--accent); --bs-btn-hover-bg:#06b6d4; --bs-btn-hover-border-color:#06b6d4; font-weight:600}
+    .btn-outline-brand{--bs-btn-color:var(--accent); --bs-btn-border-color:var(--accent); --bs-btn-hover-bg:var(--accent); --bs-btn-hover-border-color:var(--accent);}
+    .section{padding:96px 0}
+    .card-glass{background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.08); border-radius:20px; box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .tag{display:inline-block; padding:.35rem .6rem; border:1px solid rgba(255,255,255,.12); border-radius:999px; font-size:.8rem; color:var(--muted)}
+    .hero-title{font-weight:800; letter-spacing:-.02em;}
+    .gradient-text{background:linear-gradient(90deg,var(--accent),var(--accent-2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+    .pill{border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:.25rem .75rem; color:var(--muted)}
+    .timeline{position:relative; padding-left:24px}
+    .timeline:before{content:""; position:absolute; top:0; bottom:0; left:8px; width:2px; background:linear-gradient(var(--accent), transparent)}
+    .timeline-item{position:relative; margin-bottom:22px}
+    .timeline-item:before{content:""; position:absolute; left:-1px; top:.4rem; width:.75rem; height:.75rem; background:var(--accent); border-radius:999px; box-shadow:0 0 0 3px rgba(34,211,238,.15)}
+    .project-card:hover{transform:translateY(-3px); transition:transform .2s ease}
+    .avatar{width:120px; height:120px; border-radius:999px; object-fit:cover; border:3px solid rgba(255,255,255,.15)}
+    footer{border-top:1px solid rgba(255,255,255,.08)}
+    .glass{background:rgba(15, 23, 42, .55); border:1px solid rgba(255,255,255,.08); border-radius:16px}
+    .link-muted{color:var(--muted); text-decoration:none}
+    .link-muted:hover{color:#cbd5e1}
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#nav" data-bs-offset="80" tabindex="0">
+
+  <!-- Nav -->
+  <nav id="nav" class="navbar navbar-expand-lg fixed-top border-bottom border-light-subtle">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-white" href="#home">Yinan<span class="gradient-text"> Wang</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="bi bi-list text-white fs-2"></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+          <li class="nav-item"><a class="nav-link" href="#leadership">Leadership</a></li>
+          <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="home" class="section" style="padding-top:140px">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="pill me-2"><i class="bi bi-geo-alt"></i> Montréal, QC</span>
+          <span class="pill me-2"><i class="bi bi-telephone"></i> +1 (438) 455-1213</span>
+          <span class="pill"><i class="bi bi-envelope"></i> yinan.wang2@mail.mcgill.ca</span>
+          <h1 class="display-4 hero-title mt-3">Researching <span class="gradient-text">3D attention & relighting</span> — neural representations, image quality, and human visual behavior.</h1>
+          <p class="lead text-secondary mt-3">PhD in Electrical Engineering (Computer Vision) at McGill University, supervised by Prof. James J. Clark. I work at the intersection of <strong>NeRF/3D scene understanding</strong>, <strong>relighting</strong>, and <strong>image quality assessment</strong>.</p>
+          <div class="d-flex gap-3 mt-4">
+            <a href="#contact" class="btn btn-brand btn-lg"><i class="bi bi-send"></i> Contact</a>
+            <a href="#research" class="btn btn-outline-brand btn-lg"><i class="bi bi-stars"></i> Explore Research</a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="card-glass p-4 shadow-soft text-center">
+            <img class="avatar mb-3" src="https://images.unsplash.com/photo-1607990289030-d23f24cc5c57?q=80&w=480&auto=format&fit=crop" alt="Portrait placeholder"/>
+            <h3 class="mb-1">Yinan Wang</h3>
+            <div class="text-secondary">3D Vision • Relighting • Image Quality</div>
+            <div class="mt-3 d-flex gap-2 flex-wrap">
+              <span class="tag">NeRF</span>
+              <span class="tag">Gaze & Attention</span>
+              <span class="tag">Relighting</span>
+              <span class="tag">IQA</span>
+              <span class="tag">DINOv2 · I-JEPA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-7">
+          <h2 class="mb-3">About</h2>
+          <p class="text-secondary">Doctoral researcher in the Electrical and Computer Engineering Department at McGill University. My current work studies <strong>neural radiance and gaze fields</strong> for modeling human attention in 3D environments and <strong>relighting</strong> with diffusion-assisted radiance fields. Previously, I developed <strong>age-specific image quality assessment</strong> metrics and tools.</p>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="glass p-3 h-100">
+                <div class="fw-semibold">Education</div>
+                <div class="text-secondary">PhD, McGill (2023—present); MSc, McGill (2020—2022, CGPA 4.0/4.0); BEng, NJUST (2016—2020).</div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="glass p-3 h-100">
+                <div class="fw-semibold">Toolbox</div>
+                <div class="text-secondary">Python, MATLAB, C++; PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, Matplotlib.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <h2 class="mb-3">Focus</h2>
+          <ul class="timeline list-unstyled">
+            <li class="timeline-item"><div class="fw-semibold">3D Attention & Relighting</div><div class="text-secondary">Neural radiance & gaze fields; diffusion + NeRF for relighting.</div></li>
+            <li class="timeline-item"><div class="fw-semibold">Image Quality Assessment</div><div class="text-secondary">Age-specific perceptual IQA; personalized metrics using modern embeddings.</div></li>
+            <li class="timeline-item"><div class="fw-semibold">Computational Photography</div><div class="text-secondary">Enhancement, colorization, matting, inpainting, and neural style transfer.</div></li>
+          </ul>
+          <a class="btn btn-outline-brand" href="#" onclick="window.print();return false"><i class="bi bi-file-earmark-arrow-down"></i> Print to PDF</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research -->
+  <section id="research" class="section">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+        <h2 class="mb-0">Research</h2>
+        <div>
+          <span class="tag">NeRF</span>
+          <span class="tag">Gaze & Attention</span>
+          <span class="tag">Relighting</span>
+          <span class="tag">IQA</span>
+        </div>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100 project-card">
+            <div class="d-flex justify-content-between align-items-start"><h5 class="mb-1">Foundation Model for 3D Attention & Relighting</h5><span class="pill">McGill • 2023—present</span></div>
+            <p class="text-secondary">Training NeRFs for 3D scene representation; collecting shoppers’ eye-tracking data; modeling human attention with neural radiance and gaze fields; merging NeRFs for faster training; combining diffusion with NeRF for relighting.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100 project-card">
+            <div class="d-flex justify-content-between align-items-start"><h5 class="mb-1">Image Quality Assessment Metrics</h5><span class="pill">Google DeepMind • 2023—2024</span></div>
+            <p class="text-secondary">Personalized image quality metric combining benefits of multiple feature spaces. Integrated DINOv2 and I-JEPA embeddings (Fréchet/LPIPS), added MMD for distribution distance, evaluated robustness across semantic subspaces and transformations.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 mt-1">
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100 project-card">
+            <div class="d-flex justify-content-between align-items-start"><h5 class="mb-1">Age-Specific IQA</h5><span class="pill">McGill • 2020—2022</span></div>
+            <p class="text-secondary">Designed age-specific perceptual IQA; image enhancement and simulation for different age groups; implemented and evaluated IQA algorithms; psychophysical experiments to validate the metric.</p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100 project-card">
+            <div class="d-flex justify-content-between align-items-start"><h5 class="mb-1">Computational Photography Portfolio</h5><span class="pill">McGill • 2021</span></div>
+            <p class="text-secondary">Fusion, super-resolution, dehazing, colorization, matting & compositing, inpainting, and neural style transfer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects (selected older research/engineering) -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2 class="mb-3">Selected Engineering & Earlier Work</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card-glass p-4 h-100 project-card">
+            <div class="d-flex align-items-center justify-content-between"><h5 class="mb-0">Image Adaptive Filtering</h5><i class="bi bi-sliders"></i></div>
+            <p class="text-secondary mt-2">Traditional denoising; adaptive Gaussian, Wiener, and bilateral filters; MSE/PSNR evaluation.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-glass p-4 h-100 project-card">
+            <div class="d-flex align-items-center justify-content-between"><h5 class="mb-0">Log-Gabor Image Processing</h5><i class="bi bi-grid"></i></div>
+            <p class="text-secondary mt-2">Image reconstruction with log-Gabor wavelets and FFT; magnitude/phase roles; MATLAB GUI for symmetric patterns.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card-glass p-4 h-100 project-card">
+            <div class="d-flex align-items-center justify-content-between"><h5 class="mb-0">User-Centric Federated Learning</h5><i class="bi bi-diagram-3"></i></div>
+            <p class="text-secondary mt-2">Python algorithms for user-centric FL with improved distributed model accuracy.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="section">
+    <div class="container">
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+        <h2 class="mb-0">Publications & Presentations</h2>
+        <a class="btn btn-outline-brand btn-sm" href="#" aria-disabled="true">Google Scholar <i class="bi bi-box-arrow-up-right ms-1"></i></a>
+      </div>
+      <div class="card-glass p-4">
+        <ol class="mb-0">
+          <li class="mb-2"><strong>Neural Radiance and Gaze Fields for Visual Attention Modeling in 3D Environments</strong> — A. Chubarau, <u>Y. Wang</u>, J. J. Clark. <span class="text-secondary">arXiv preprint, 2025</span></li>
+          <li class="mb-2"><strong>An Egocentric Video and Eye-Tracking Dataset for Visual Search in Convenience Stores</strong> — <u>Y. Wang</u>, S. Panchadsaram, S. Sherkati, J. J. Clark. <span class="text-secondary">CVIU, Volume 248, Nov 2024</span></li>
+          <li class="mb-2"><strong>Age-specific Perceptual Image Quality Assessment</strong> — <u>Y. Wang</u>, A. Chubarau, H. J. Yoo, T. Akhavan, J. J. Clark. <span class="text-secondary">IS&T Electronic Imaging 2023 (Oral)</span></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teaching -->
+  <section id="teaching" class="section">
+    <div class="container">
+      <h2 class="mb-3">Teaching</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100">
+            <h5 class="mb-1">ECSE 415 — Introduction to Computer Vision (3 credits)</h5>
+            <div class="text-secondary">Designed assignment #2 (face recognition with PCA), taught tutorials, held weekly office hours.</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100">
+            <h5 class="mb-1">COMP 551 — Applied Machine Learning (4 credits)</h5>
+            <div class="text-secondary">Designed assignment #2 (text classification), taught tutorials, held office hours.</div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100">
+            <h5 class="mb-1">COMP 202 — Foundations of Programming (3 credits)</h5>
+            <div class="text-secondary">Wrote Python unit tests for grading; held weekly office hours.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Leadership -->
+  <section id="leadership" class="section">
+    <div class="container">
+      <h2 class="mb-3">Leadership</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100">
+            <h5 class="mb-1">Society of Women Engineers (McGill University Chapter)</h5>
+            <div class="text-secondary">President</div>
+            <ul class="mt-2 text-secondary">
+              <li>Recruited members; led weekly meetings; managed funding applications.</li>
+              <li>Organized university-wide career workshops and movie nights.</li>
+              <li>Ran outreach workshops at a local high school for prospective engineers.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card-glass p-4 h-100">
+            <h5 class="mb-1">Unmanned Aerial Vehicle Association (NJUST)</h5>
+            <div class="text-secondary">Vice President</div>
+            <ul class="mt-2 text-secondary">
+              <li>Recruited members and organized weekly tutorials.</li>
+              <li>Led the team in national UAV model competitions.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section id="awards" class="section">
+    <div class="container">
+      <h2 class="mb-3">Scholarships, Awards & Competitions</h2>
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="glass p-3 h-100">
+            <ul class="mb-0 text-secondary">
+              <li>NSERC Research Funding — CAD 30,000</li>
+              <li>Graduate Excellence Award in Engineering — CAD 22,000</li>
+              <li>Ministre du développement économique, de l'innovation — CAD 12,000</li>
+              <li>Graduate Research Enhancement and Travel (GREAT) Award — CAD 343</li>
+              <li>Faurecia IRYStec Research Funding — CAD 24,000</li>
+              <li>Graduate Excellence Fellowship — CAD 4,650</li>
+              <li>Mitacs Globalink Graduate Fellowship — CAD 15,000</li>
+              <li>Huawei Technologies Canada Research Funding — CAD 10,000</li>
+              <li>Mitacs Globalink Research Internship Award — CAD 5,400</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="glass p-3 h-100">
+            <ul class="mb-0 text-secondary">
+              <li>McGill-FIAM Asset Management Hackathon — 3rd place in Canada (team of 5)</li>
+              <li>McMedHacks — Best Medical Imaging Visualization & Best Classification (team of 5)</li>
+              <li>NJUST Excellent Student Scholarship</li>
+              <li>COMAP Interdisciplinary Contest in Modeling — Honorable Mention</li>
+              <li>Asia and Pacific Mathematical Contest in Modeling — Second Prize</li>
+              <li>Chinese Mathematics Competitions (Non-Math Majors) — Third Prize</li>
+              <li>China Undergraduate Mathematical Contest in Modeling — Third Prize</li>
+              <li>NJUST Science & Tech Works Competition — First Prize</li>
+              <li>NJUST “Innovation Cup” Electronic Design Contest — Second Prize</li>
+              <li>NJUST Robot Design Contest — Second Prize</li>
+              <li>China Aeromodelling Design Challenge — Second Prize</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="mb-2">Get in touch</h2>
+          <p class="text-secondary">For collaborations or speaking, send a note. I’m especially interested in projects around 3D attention modeling, relighting, and image quality.</p>
+          <div class="card-glass p-4">
+            <form id="contactForm" action="mailto:yinan.wang2@mail.mcgill.ca" method="post" enctype="text/plain">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell me about your project…" required></textarea>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-brand" type="submit"><i class="bi bi-send"></i> Send</button>
+                <button class="btn btn-outline-brand" type="reset"><i class="bi bi-arrow-counterclockwise"></i> Reset</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h2 class="mb-2">Quick facts</h2>
+          <div class="row g-3">
+            <div class="col-12">
+              <div class="glass p-3 d-flex align-items-center justify-content-between">
+                <div>
+                  <div class="fw-semibold">Areas</div>
+                  <div class="text-secondary">3D Vision · NeRF · Relighting · Gaze & Attention · IQA</div>
+                </div>
+                <i class="bi bi-boxes fs-2"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="glass p-3 d-flex align-items-center justify-content-between">
+                <div>
+                  <div class="fw-semibold">Languages & Libraries</div>
+                  <div class="text-secondary">Python, MATLAB, C++; PyTorch, TensorFlow, scikit-learn, NumPy, Pandas, Matplotlib</div>
+                </div>
+                <i class="bi bi-code-slash fs-2"></i>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="glass p-3 d-flex align-items-center justify-content-between">
+                <div>
+                  <div class="fw-semibold">Location</div>
+                  <div class="text-secondary">Montréal, Canada (EST)</div>
+                </div>
+                <i class="bi bi-geo-alt fs-2"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 text-center text-secondary">
+    <div class="container small">
+      <div class="mb-2">
+        © <span id="year"></span> Yinan Wang • Built with Bootstrap 5
+      </div>
+      <div>
+        <a class="link-muted me-3" href="#home">Back to top</a>
+        <a class="link-muted" href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const navLinks = document.querySelectorAll('#nav .nav-link');
+    navLinks.forEach(link=>link.addEventListener('click',()=>{
+      const el = document.querySelector(link.getAttribute('href'));
+      if(el){
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 70;
+        window.scrollTo({top:y, behavior:'smooth'});
+      }
+    }));
+  </script>
+</body>
+</html>
